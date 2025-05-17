@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Form for OA Round in XYZ Company</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Form for OA Round</h1>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+
+        <label for="username">Enter your username: <span class="required">*</span></label>
+        <input type="text" name="username" id="username" placeholder="Enter username" required autofocus>
+
+        <label for="email">Enter your email: <span class="required">*</span></label>
+        <input type="email" name="email" id="email" placeholder="example@example.com" required>
+
+        <label for="tel">Enter your telephone number: <span class="required">*</span></label>
+        <input type="tel" name="tel" id="tel" required pattern="\d{10}" maxlength="10" inputmode="numeric"
+            title="Enter exactly 10 digits">
+
+        <label for="age">Enter your age:</label>
+        <input type="number" name="age" id="age" min="18" max="99" placeholder="18+ only">
+
+        <label for="dob">Select your date of birth:</label>
+        <input type="date" name="dob" id="dob">
+
+        <label for="resume">Upload your resume:</label>
+        <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx">
+
+        <label for="country">Select your country:</label>
+        <select name="country" id="country">
+            <option value="" disabled selected>Select country</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Germany">Germany</option>
+            <option value="Japan">Japan</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <fieldset>
+            <legend>Select Gender:</legend>
+            <label><input type="radio" name="gender" value="male"> Male</label><br>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences:</legend>
+            <label><input type="checkbox" name="subscribe" value="yes"> Subscribe to newsletter</label><br>
+            <label><input type="checkbox" name="pen" value="yes"> You have your own stationery</label><br>
+            <label><input type="checkbox" name="disabled" value="yes"> You are disabled</label><br>
+            <label><input type="checkbox" name="PPO" value="yes"> You want PPO offer if any</label>
+        </fieldset>
+
+        <label for="comment">Enter your reference (if any):</label>
+        <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Reference details..."></textarea>
+
+        <label for="lang">Enter your favorite programming language:</label>
+        <select name="lang" id="lang">
+            <option value="C++">C++</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="GO">GO</option>
+            <option value="R">R</option>
+        </select>
+
+        <label><input type="checkbox" name="terms" required> I agree to the terms and conditions <span class="required">*</span></label>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+
+</html>
