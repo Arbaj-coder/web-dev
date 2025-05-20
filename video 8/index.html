@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Specificity</title>
+
+    <style>
+        /* =======================================
+           CSS SPECIFICITY DEMONSTRATION
+        ======================================= */
+
+        /* Specificity: 1 (Element selector) */
+        h1 {
+            color: aqua;
+        }
+
+        /* Specificity: 10 (Class selector) */
+        .cpurple {
+            color: purple;
+        }
+
+        /* Specificity: 1 + 10 = 11 (Element + class) */
+        h1.yellow {
+            color: yellow;
+        }
+
+        /* Specificity: 10 (Attribute selector) */
+        [data-x="a"] {
+            color: maroon;
+        }
+
+        /* Specificity: 10 (Class selector) */
+        .cred {
+            color: red;
+        }
+
+        /* Specificity: 
+           - a = 1 (element)
+           - .harryclass = 10
+           - .rohan-class = 10
+           - [href] = 10
+           - :hover = 10
+           Total = 1 + 10 + 10 + 10 + 10 = 41
+        */
+        a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- The element has:
+            - Tag: h1
+            - Classes: yellow, cred, cpurple
+            - Attribute: data-x="a"
+          The most specific selector wins.
+        -->
+        <h1 class="yellow cred cpurple" data-x="a">CSS Specificity</h1>
+
+        <!-- Hover specificity example -->
+        <a class="harryclass rohan-class" href="#">Hover over me</a>
+    </div>
+</body>
+
+</html>

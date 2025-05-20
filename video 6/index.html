@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        /* Reset default browser spacing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Include padding & border in element size */
+        }
+
+        /* Common styles for all boxes */
+        .box {
+            width: 300px;
+            background-color: aqua;
+            padding: 20px;
+            margin: 30px auto;
+            border: 2px solid gray;
+            border-radius: 10px;         /* Rounded corners */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+            transition: all 0.3s ease-in-out;            /* Smooth hover effect */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* Box 1 - Yellow Text + Custom Border */
+        .box1 {
+            color: yellow;
+            border: 2px solid blue;
+            background-color: #00ffff;
+        }
+
+        /* Box 2 - Red Text + Dark Border */
+        .box2 {
+            color: red;
+            border: 2px solid black;
+            background-color: #e0ffff;
+        }
+
+        /* Hover effect on boxes */
+        .box:hover {
+            transform: scale(1.05);                /* Slight zoom */
+            background-color: #d4f1f9;             /* Light change */
+            box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Box 1 -->
+    <div class="box box1">I am Box One</div>
+
+    <!-- Box 2 -->
+    <div class="box box2">I am Box Two</div>
+</body>
+
+</html>

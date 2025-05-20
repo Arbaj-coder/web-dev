@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* =========================
+           BASIC SELECTORS
+        ========================= */
+
+        /* Element Selector - Targets all <div> elements */
+        /* div {
+             background-color: red;   Example usage 
+         }  */
+
+        /* Class Selector - Targets elements with class 'red' */
+        .red {
+            background-color: red;
+        }
+
+        /* ID Selector - Targets element with ID 'green' */
+        #green {
+            background-color: green;
+        }
+
+        /* =========================
+           COMBINATOR SELECTORS
+        ========================= */
+
+        /* Child Selector - Targets <p> directly inside <div> */
+        div > p {
+            color: blue;
+            background-color: brown;
+        }
+
+        /* Descendant Selector - Targets all <p> inside <div> (any level deep) */
+        div p {
+            color: blue;
+            background-color: brown;
+        }
+
+        /* =========================
+           UNIVERSAL SELECTOR
+        ========================= */
+
+        /* Applies to all elements */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* =========================
+           PSEUDO CLASSES
+        ========================= */
+
+        /* Visited link */
+        a:visited {
+            color: yellow;
+        }
+
+        /* Unvisited link */
+        a:link {
+            color: green;
+        }
+
+        /* Active link (clicked) */
+        a:active {
+            background-color: red;
+        }
+
+        /* Hover effect on link */
+        a:hover {
+            background-color: yellow;
+        }
+
+        /* Targets first child <p> of its parent */
+        p:first-child {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MAIN SECTION -->
+    <main class="one">
+        <p>I am first</p>
+        <p>I am second</p>
+    </main>
+
+    <!-- DIV with class 'red' (red background) -->
+    <div class="red">
+        I am a div
+        <article>
+            <p>I am a para inside div</p>
+        </article>
+    </div>
+
+    <!-- DIV with ID 'green' (green background) -->
+    <div id="green">
+        I am another div
+    </div>
+
+    <!-- Anchor Tags to demonstrate pseudo-classes -->
+    <a href="https://www.google.com">Go to Google</a><br>
+    <a href="https://www.facebook2.com">Go to Facebook</a>
+
+</body>
+</html>
