@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap');
+.boxes{
+    display: flex;
+}
+@media only screen and (max-width: 921px){    
+            .boxes{
+                flex-direction: column;
+            }
+        }       
+body{
+            background-color: #EAEFF1;
+            font-family: "Poltawski Nowy", serif;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            margin: 30px;
+            padding: 30px;
+            width: 300px;
+            border: none;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 0 8px;
+        }
+        .img{
+            border-radius: 5%;
+            max-width: 100%;           /* scale down image if too large */
+            max-height: 100%;
+            
+        }
+        span{
+            font-size: 14px;
+            padding: 3px 6px;
+            margin: 5px;
+            border: 0.1px solid gray;
+            border-radius: 40%;
+            
+        }
+    .button{
+        text-align: center;
+    }    
+    .my-button {
+      background-color: #E0EFFF;
+      position: relative;
+      border: none;
+      color: #268BFF;
+      padding: 12px 24px;
+      font-size: 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .my-button:hover {
+      background-color: #086afd;  /* Darker green on hover */
+    }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">
+            <img class="img" src="nature.webp" alt="nature">
+            <br>
+            <br>
+            <span>Nature</span>
+            <span>Lake</span>
+            <br>
+            <br>
+            <h1>Lorem ipsum dolor</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, voluptatem, molestiae sapiente mollitia minima similique reiciendis eius unde fugit sunt, tempora officiis. Omnis, commodi suscipit amet debitis assumenda corporis perferendis.</p>
+            <br>
+            <div class="button">
+                <button class="my-button">Read More</button>
+            </div>
+        </div>
+        <div class="box box1">
+            <img class="img" src="nature.webp" alt="nature">
+            <br>
+            <br>
+            <span>Nature</span>
+         <span>Lake</span>
+         <br>
+         <br>
+         <h1>Lorem ipsum dolor</h1>
+         <br>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, voluptatem, molestiae sapiente mollitia minima similique reiciendis eius unde fugit sunt, tempora officiis. Omnis, commodi suscipit amet debitis assumenda corporis perferendis.</p>
+         <br>
+         <div class="button">
+             <button class="my-button">Read More</button>
+            </div>
+        </div>
+        <div class="box box2">
+            <img class="img" src="nature.webp" alt="nature">
+            <br>
+            <br>
+            <span>Nature</span>
+            <span>Lake</span>
+            <br>
+            <br>
+            <h1>Lorem ipsum dolor</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, voluptatem, molestiae sapiente mollitia minima similique reiciendis eius unde fugit sunt, tempora officiis. Omnis, commodi suscipit amet debitis assumenda corporis perferendis.</p>
+            <br>
+            <div class="button">
+                <button class="my-button">Read More</button>
+            </div>
+        </div>        
+        </div>
+    </body>
+    </html>

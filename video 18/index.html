@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multicolor Theme Website</title>
+  <style>
+    :root {
+      --bg-color: white;
+      --text-color: black;
+      --accent-color: cornflowerblue;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+      padding: 2rem;
+    }
+
+    .theme-buttons button {
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .theme-buttons {
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      border: 2px solid var(--accent-color);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="theme-buttons">
+    <button onclick="setTheme('light')">Light</button>
+    <button onclick="setTheme('dark')">Dark</button>
+    <button onclick="setTheme('sunset')">Sunset</button>
+  </div>
+
+  <div class="content">
+    <h1>Welcome to My Colorful Site</h1>
+    <p>This site changes color themes using CSS variables. Click the buttons above!</p>
+  </div>
+
+  <script>
+    const themes = {
+      light: {
+        '--bg-color': 'white',
+        '--text-color': 'black',
+        '--accent-color': 'cornflowerblue'
+      },
+      dark: {
+        '--bg-color': '#121212',
+        '--text-color': 'white',
+        '--accent-color': '#bb86fc'
+      },
+      sunset: {
+        '--bg-color': '#ffeadb',
+        '--text-color': '#3e1f47',
+        '--accent-color': '#ff5e5b'
+      }
+    };
+
+    function setTheme(themeName) {
+      const theme = themes[themeName];
+      for (let key in theme) {
+        document.documentElement.style.setProperty(key, theme[key]);
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid blue;
+            /* display: inline;  there is no top padding*/ 
+            display: inline-block;
+            padding: 46px;
+            margin: 10px;
+        }
+        .box1{
+            /* display: none; */
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">hi am in box</div>
+    <div class="box"> i am another box</div>
+    <span>hello i am span1</span>
+    <span> hello i am span2</span>
+</body>
+</html>
