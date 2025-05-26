@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download UltraEdit text editor</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .logo {
+      width: 200px;
+      margin-right: 100px;
+    }
+
+    .nav-content {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      position: relative;
+    }
+
+    .dropdown-parent {
+      position: relative;
+       padding: 10px 0px;
+    }
+    .dropdown-parent > span {
+  display: inline-block;
+  padding: 10px 15px; 
+}
+
+    .dropdown,
+    .dropdown-1 {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: black;
+      border: 1px solid #ccc;
+      padding: 10px 0;
+      min-width: 200px;
+      z-index: 1000;
+    }
+
+    .dropdown li,
+    .dropdown-1 li {
+      padding: 8px 20px;
+      position: relative;
+    }
+
+    .dropdown li a,
+    .dropdown-1 li a {
+      text-decoration: none;
+      color: white;
+      display: block;
+      transition: opacity 0.3s ease-out;
+    }
+
+    .dropdown li a:hover,
+    .dropdown-1 li a:hover {
+      opacity: 0.6;
+    }
+
+    .dropdown-parent:hover .dropdown {
+      display: block;
+    }
+
+    .has-submenu:hover .dropdown-1 {
+      display: block;
+      left: 100%;
+      top: 0;
+    }
+
+    .has-submenu > a::after {
+      content: "▶";
+      font-size: 0.6em;
+      margin-left: 5px;
+    }
+
+    /* Product Mega Panel Styling */
+    .product-panel {
+      position: absolute;
+      top: 100%;
+      right: -538px;
+      width: 69vw;
+      background-color: black;
+      color: white;
+      padding: 20px;
+      z-index: 1000;
+      display: none;
+    }
+
+    .dropdown-parent:hover .product-panel {
+      display: block;
+    }
+
+    .product-panel nav ul {
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid white;
+    }
+
+    .Download {
+      background-color: rgb(3, 192, 225);
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      padding: 6px 15px;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .Buy-now {
+      background-color: black;
+      border: 1px solid white;
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      padding: 6px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .product-box {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 8px;
+      flex: 1 1 250px;
+      max-width: 272px;
+      text-align: center;
+    }
+
+    .product-box img {
+      height: 35px;
+    }
+
+    .product-box p {
+      font-size: 12px;
+      margin: 10px 0;
+    }
+.dropdown,
+.dropdown-1,
+.product-panel {
+  pointer-events: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dropdown-parent:hover .dropdown,
+.dropdown-parent:hover .dropdown-1,
+.dropdown-parent:hover .product-panel {
+  visibility: visible;
+  opacity: 1;
+}
+span:hover{
+    cursor: pointer;
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><img class="logo" src="logo.png" alt="Logo"></li>
+        <li>
+          <div class="nav-content">
+            <!-- Product Dropdown -->
+            <div class="dropdown-parent">
+              <span>Product <span style="font-size: 0.8em;">▾</span></span>
+              <div class="product-panel">
+                <nav>
+                  <ul>
+                    <li><img style="height: 80px;" src="nav.png" alt=""></li>
+                    <li><button class="Download">Download</button></li>
+                    <li><button class="Buy-now">Buy now</button></li>
+                  </ul>
+                </nav>
+                <main>
+                  <div class="container">
+                    <div class="product-box">
+                      <img src="p1.png" alt="">
+                      <p>The world's #1 text editor</p>
+                      <button class="Download">Download</button>
+                      <button class="Buy-now">Buy now</button>
+                    </div>
+                    <div class="product-box">
+                      <img src="p2.png" alt="">
+                      <p>Text/file/folder compare</p>
+                      <button class="Download">Download</button>
+                      <button class="Buy-now">Buy now</button>
+                    </div>
+                    <div class="product-box">
+                      <img src="p3.png" alt="">
+                      <p>The ultimate Git toolset</p>
+                      <button class="Download">Download</button>
+                      <button class="Buy-now">Buy now</button>
+                    </div>
+                    <div class="product-box">
+                      <img src="p4.png" alt="">
+                      <p>Powerful file/folder search</p>
+                      <button class="Download">Download</button>
+                      <button class="Buy-now">Buy now</button>
+                    </div>
+                    <div class="product-box">
+                      <img src="p5.png" alt="">
+                      <p>Powerful FTP client</p>
+                      <button class="Download">Download</button>
+                      <button class="Buy-now">Buy now</button>
+                    </div>
+                    <div class="product-box">
+                      <img src="p6.png" alt="">
+                      <p>UE/UC for USB / PortableApps</p>
+                      <button class="Download">Download</button>
+                      <button class="Buy-now">Buy now</button>
+                    </div>
+                  </div>
+                </main>
+              </div>
+            </div>
+
+            <!-- Other Dropdowns -->
+            <div class="dropdown-parent">
+              <span>For business <span style="font-size: 0.8em;">▾</span></span>
+              <ul class="dropdown">
+                <li><a href="#">Get a quote</a></li>
+                <li><a href="#">Product catalog</a></li>
+                <li><a href="#">Licensing FAQs</a></li>
+                <li><a href="#">Security & compliance</a></li>
+                <li><a href="#">International distributors</a></li>
+              </ul>
+            </div>
+
+            <div class="dropdown-parent">
+              <span>Resources <span style="font-size: 0.8em;">▾</span></span>
+              <ul class="dropdown">
+                <li class="has-submenu">
+                  <a href="#">Extra downloads</a>
+                  <ul class="dropdown-1">
+                    <li><a href="#">Wordfiles</a></li>
+                    <li><a href="#">Themes</a></li>
+                    <li><a href="#">Macros & scripts</a></li>
+                    <li><a href="#">Tags & autocomplete</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">White papers</a></li>
+                <li class="has-submenu">
+                  <a href="#">Support</a>
+                  <ul class="dropdown-1">
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">User forums</a></li>
+                    <li><a href="#">Get support</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <span>Academic Licensing</span>
+
+            <div class="dropdown-parent">
+              <span>Our company <span style="font-size: 0.8em;">▾</span></span>
+              <ul class="dropdown">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <span><img style="width: 18px;" src="earth.png" alt=""> English</span>
+            <span><img style="width: 18px;" src="search.png" alt=""></span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</body>
+
+</html>
