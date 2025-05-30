@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curved Path Animation</title>
+    <style>
+        :root {
+            --box-size: 121px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+            height: 80vh;
+            width: 100vw;
+            background-color: #001f3f;
+            overflow: hidden;
+        }
+
+        .box {
+            position: absolute;
+            width: var(--box-size);
+            height: var(--box-size);
+            background-color: red;
+            border-radius: 50%;
+            bottom: 0;
+            left: 0;
+            animation: moveX 4s linear forwards, bounceY 4s ease-in forwards;
+        }
+
+        @keyframes moveX {
+            to {
+                transform: translateX(50vw);
+            }
+        }
+
+        @keyframes bounceY {
+            0% {
+                bottom: 51vh;
+            }
+
+            20% {
+                bottom: 0;
+            }
+
+            40% {
+                bottom: 34vh;
+            }
+
+            60% {
+                bottom: 0;
+            }
+
+            80% {
+                bottom: 17vh;
+            }
+
+            100% {
+                bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

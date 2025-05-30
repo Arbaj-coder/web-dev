@@ -5,6 +5,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Download UltraEdit text editor</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+  </style>
   <style>
     * {
       margin: 0;
@@ -16,7 +28,7 @@
       list-style: none;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       padding: 10px;
     }
 
@@ -29,17 +41,19 @@
       display: flex;
       gap: 20px;
       align-items: center;
+      gap: 17px;
       position: relative;
     }
 
     .dropdown-parent {
       position: relative;
-       padding: 10px 0px;
+      padding: 10px 0px;
     }
-    .dropdown-parent > span {
-  display: inline-block;
-  padding: 10px 15px; 
-}
+
+    .dropdown-parent>span {
+      display: inline-block;
+      padding: 10px 15px;
+    }
 
     .dropdown,
     .dropdown-1 {
@@ -83,7 +97,7 @@
       top: 0;
     }
 
-    .has-submenu > a::after {
+    .has-submenu>a::after {
       content: "▶";
       font-size: 0.6em;
       margin-left: 5px;
@@ -159,38 +173,127 @@
       font-size: 12px;
       margin: 10px 0;
     }
-.dropdown,
-.dropdown-1,
-.product-panel {
-  pointer-events: auto;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
 
-.dropdown-parent:hover .dropdown,
-.dropdown-parent:hover .dropdown-1,
-.dropdown-parent:hover .product-panel {
-  visibility: visible;
-  opacity: 1;
-}
-span:hover{
-    cursor: pointer;
-}
+    .dropdown,
+    .dropdown-1,
+    .product-panel {
+      pointer-events: auto;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
 
+    .dropdown-parent:hover .dropdown,
+    .dropdown-parent:hover .dropdown-1,
+    .dropdown-parent:hover .product-panel {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    span:hover {
+      cursor: pointer;
+    }
+
+    .mid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: auto;
+      padding: 10px;
+      width: 1013px;
+    }
+
+    .a_button {
+      margin: 20px;
+      padding: 15px;
+      font-size: 14px;
+      background-color: #00b6d1;
+      border-width: 0 !important;
+      border-radius: 5px;
+      font-weight: 700;
+      font-style: normal;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .a-botton {
+      text-decoration: none;
+      color: white;
+    }
+
+    .main-hadding {
+      display: flex;
+      margin: 20px 19vw 20px 19vw;
+      gap: 30px;
+    }
+    .middle_contant{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px 17vw;
+      overflow-wrap: anywhere;
+      gap: 20px;
+    }
+    .bg-light {
+      display: inline;
+      justify-items: center;
+      padding: 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .grid-button {
+      margin-top: 10px;
+    }
+
+    .grid-button1 {
+      background-color: #5cb85c;
+      color: #fff;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .hash {
+      font-size: 10px;
+      padding: 0px 8px 3px 0px;
+    }
+@media only screen and (max-width: 1000px) {
+  .middle_contant {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0px -115vw 32px 14vw;   
+  }
+    .bg-light {
+    display: inline;
+    justify-items: center;
+    padding: 20px;
+    }
+      .main-hadding {
+      display: flex;
+      margin: 20px -100vw 20px 19vw;
+      gap: 30px;
+    }  
+}
   </style>
 </head>
 
 <body>
+
   <header>
     <nav>
       <ul>
-        <li><img class="logo" src="logo.png" alt="Logo"></li>
+        <li><a target="_blank" href="https://www.ultraedit.com/">
+          <img class="logo" src="logo.png" alt="Logo"></li>
+        </a>
         <li>
           <div class="nav-content">
-            <!-- Product Dropdown -->
             <div class="dropdown-parent">
-              <span>Product <span style="font-size: 0.8em;">▾</span></span>
+              <span>Products <span><img style="width: 10px;" src="down-arrow.png" alt=""></span></span>
               <div class="product-panel">
                 <nav>
                   <ul>
@@ -244,7 +347,7 @@ span:hover{
 
             <!-- Other Dropdowns -->
             <div class="dropdown-parent">
-              <span>For business <span style="font-size: 0.8em;">▾</span></span>
+              <span>For business <span><img style="width: 10px;" src="down-arrow.png" alt=""></span></span>
               <ul class="dropdown">
                 <li><a href="#">Get a quote</a></li>
                 <li><a href="#">Product catalog</a></li>
@@ -255,7 +358,7 @@ span:hover{
             </div>
 
             <div class="dropdown-parent">
-              <span>Resources <span style="font-size: 0.8em;">▾</span></span>
+              <span>Resources <span><img style="width: 10px;" src="down-arrow.png" alt=""></span></span>
               <ul class="dropdown">
                 <li class="has-submenu">
                   <a href="#">Extra downloads</a>
@@ -282,7 +385,7 @@ span:hover{
             <span>Academic Licensing</span>
 
             <div class="dropdown-parent">
-              <span>Our company <span style="font-size: 0.8em;">▾</span></span>
+              <span>Our company <span><img style="width: 10px;" src="down-arrow.png" alt=""></span></span>
               <ul class="dropdown">
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Events</a></li>
@@ -298,6 +401,182 @@ span:hover{
       </ul>
     </nav>
   </header>
-</body>
-
-</html>
+  <div class="mid">
+    <p style="font-size: 45px;">
+      Download <strong>UltraEdit</strong> for Windows
+      <a target="_blank" style="text-decoration: none; margin: 10px;"
+        href="https://www.g2.com/products/ultraedit/reviews/">
+        <img src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt="">
+      </a>
+    </p>
+    <p style="font-size: 25px; margin: 25px; display: flex; text-align: center;">
+      Download and try UltraEdit before you buy it! This download includes the full Windows version of the text editor.
+    </p>
+    <div class="a_button">
+      <a target="_blank" class="a-botton" href="https://www.ultraedit.com/downloads/uex-thank-you/">Download Mac or
+        Linux version</a>
+    </div>
+  </div>
+  <div class="main-hadding">
+    <img style="width: 70px;" src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_logo_icon_white.png" alt="">
+    <h3>Download UltraEdit&nbsp;<small style="font-size: 15px;">v2024.3.0.15 (released 2025-04-25) | <a target="_blank"
+          style="text-decoration: none;" href="/updates/uehotfix/">Hotfix information&nbsp;</a></small></h3>
+  </div>
+  <div class="middle_contant">
+      <div class="bg-light">
+        <h3 style="margin: 10px;">
+          <strong>English
+          </strong>
+        </h3>
+        <h4><small>&nbsp;</small></h4>
+        
+        <div class="grid-button">
+          <a href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*1s3fr74*_gcl_au*NjU3MTc0MzM4LjE3NDgyMzMxNDc.*_ga*Mjc1MTI0NTQ3LjE3NDgyMzMxNDc.*_ga_QNXHVTPWNS*czE3NDg0ODczMjQkbzQkZzEkdDE3NDg0ODkyMDAkajYwJGwwJGgw"
+          class="grid-button1">Download 64-bit</a>
+        </div>
+        <div class="hash">
+          SHA256
+        </div>
+        <p style="font-size: 10px;">F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E93292D91AE27</p>
+      </div>    
+      <div class="bg-light">
+        <h3><strong>Deutsch</strong></h3>
+        <h4><small>German</small></h4>
+        <div class="grid-button">
+          <a href="https://downloads.ultraedit.com/main/ue/win/ue_german_64.exe" class="grid-button1">Download 64-bit</a>
+        </div>
+        <div class="hash">
+          SHA256
+        </div>
+        <p style="font-size: 10px;">96281171482C8AB26C2B135C27EA9E426F183096A9CF37DB7B7FDEB9A0F48DEE</p>
+      </div>
+      <div class="bg-light">
+        <h3>
+          <strong>Italiano
+          </strong>
+        </h3>
+        <h4><small>Italian</small></h4>
+        
+        <div class="grid-button">
+          <a href="https://downloads.ultraedit.com/main/ue/win/ue_italian_64.exe" class="grid-button1">Download
+            64-bit</a>
+          </div>
+          <div class="hash">
+            SHA256
+          </div>
+          <p style="font-size: 10px;">B5B4C62F14CB578F01BCAA7210E5F05E416C36130CF7E8B3B96C194C9E7D4B21</p>
+        </div>
+        <div class="bg-light">
+          <h3>
+            <strong>Español
+            </strong>
+          </h3>
+          <h4><small>Spanish</small></h4>
+          
+          <div class="grid-button">
+            <a href="https://downloads.ultraedit.com/main/ue/win/ue_spanish_64.exe" class="grid-button1">Download
+              64-bit</a>
+            </div>
+            <div class="hash">
+              SHA256
+            </div>
+            <p style="font-size: 10px;">8A1477125636ABE0E0D540F52AB7F6C99A5F1E37BBA5AEC8EFABE53D633231B7</p>
+          </div>
+          <div class="bg-light">
+            <h3>
+              <strong>français
+              </strong>
+            </h3>
+            <h4><small>French</small></h4>
+            
+            <div class="grid-button">
+              <a href="https://downloads.ultraedit.com/main/ue/win/ue_french_64.exe" class="grid-button1">Download 64-bit</a>
+            </div>
+            <div class="hash">
+        SHA256
+      </div>
+      <p style="font-size: 10px;">7666F7481BF485A45ADE396FC2A10808D2285D05B4B713832CCFAD45694F9D2D</p>
+    </div>
+    <div class="bg-light">
+      <h3>
+        <strong>Português brasileiro
+        </strong>
+      </h3>
+      <h4><small>Brazilian Portuguese</small></h4>
+      
+      <div class="grid-button">
+        <a href="https://downloads.ultraedit.com/main/ue/win/ue_portuguese_64.exe" class="grid-button1">Download
+          64-bit</a>
+        </div>
+        <div class="hash">
+          SHA256
+        </div>
+        <p style="font-size: 10px;">029517243F00068F73193A81F3212C3256997AD51DA0B1414F8F12BF9BDB53DC</p>
+      </div>
+      <div class="bg-light">
+        <h3>
+          <strong>日本
+          </strong>
+        </h3>
+        <h4><small>Japanese</small></h4>
+        
+        <div class="grid-button">
+          <a href="https://downloads.ultraedit.com/main/ue/win/ue_japanese_64.exe" class="grid-button1">Download
+            64-bit</a>
+          </div>
+          <div class="hash">
+            SHA256
+          </div>
+          <p style="font-size: 10px;">7041BB36B2068250962A1F27D74ECA93CEB67828B6963800AA1BB4A8B33448AF</p>
+        </div>
+        <div class="bg-light">
+          <h3>
+            <strong>한국어
+            </strong>
+          </h3>
+          <h4><small>Korean</small></h4>
+          
+          <div class="grid-button">
+            <a href="https://downloads.ultraedit.com/main/ue/win/ue_korean_64.exe" class="grid-button1">Download
+              64-bit</a>
+            </div>
+            <div class="hash">
+              SHA256
+            </div>
+            <p style="font-size: 10px;">5A719E02C8923ECA2AA889056C5B5899FE6E6CBD79B1851624244DF0E7DFE17C</p>
+          </div>
+          <div class="bg-light">
+            <h3>
+              <strong>华语
+              </strong>
+            </h3>
+            <h4><small>Chinese</small></h4>
+            
+            <div class="grid-button" >
+              <a href="https://downloads.ultraedit.com/main/ue/win/ue_chinese_64.exe" class="grid-button1">Download
+                64-bit</a>
+      </div>
+      <div class="hash">
+        SHA256
+      </div>
+      <p style="font-size: 10px;">220DCFE5B4FC303933674DB210E744AF8BEAE05275437D8CF3D89E1A6CCB6E6C</p>
+    </div>
+    <div class="bg-light">
+      <h3>
+        <strong>華語
+        </strong>
+      </h3>
+      <h4><small>Traditional Chinese</small></h4>
+      
+      <div class="grid-button">
+        <a href="https://downloads.ultraedit.com/main/ue/win/ue_chinese_traditional_64.exe" class="grid-button1">Download
+          64-bit</a>
+        </div>
+        <div class="hash">
+          SHA256
+        </div>
+        <p style="font-size: 10px;">529939C05D041CDCAB72925500988C4C23E7C8EF0E7311E4CD25C534F81AEB0F</p>
+      </div>
+</div>
+  </body>
+  </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS transition</title>
+    <style>
+        .container{
+            background-color: antiquewhite;
+            width: 70vw;
+            height: 50vh;
+        }
+        .box{
+            background-color: aqua;
+            width: 7vw;
+            height: 5vh;
+            /* transition-property: transform , background-color;
+            transition-duration: 3s;
+            transition-timing-function: cubic-bezier(1, 1.82, 0,-0.92);
+            transition-delay: 1s; */
+            transition: all 3s ease-in-out 1s;
+        }
+        .box:hover{
+            background-color: blue;
+            transform: scale(2) translateX(10vw) translateY(10vh);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            hi
+        </div>
+    </div>
+</body>
+</html>
