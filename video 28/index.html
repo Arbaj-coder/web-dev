@@ -31,38 +31,24 @@
             border-radius: 50%;
             bottom: 0;
             left: 0;
-            animation: moveX 4s linear forwards, bounceY 4s ease-in forwards;
+            animation: bounceY 1s ease-out infinite alternate , moveX 3s linear infinite forwards;
         }
 
         @keyframes moveX {
+            from{
+                left: 0;
+            }
             to {
-                transform: translateX(50vw);
+                left: 100%;
             }
         }
 
         @keyframes bounceY {
-            0% {
-                bottom: 51vh;
-            }
-
-            20% {
+            from{
                 bottom: 0;
             }
-
-            40% {
-                bottom: 34vh;
-            }
-
-            60% {
-                bottom: 0;
-            }
-
-            80% {
-                bottom: 17vh;
-            }
-
-            100% {
-                bottom: 0;
+            to{
+                bottom: 100%;
             }
         }
     </style>
