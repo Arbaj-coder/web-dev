@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 23px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 60px;
+            border: 2px solid black;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px;
+        }
+        .btn button{
+            height: 5vh;
+            width: 8vw;
+            border-radius: 8px;
+            background-color: aquamarine;
+            cursor: pointer;
+        }
+        .btn button:hover{
+            background-color: rgb(159, 232, 208);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Given 5 boxes, Assign a random color and a random background to each box using DOM concepts
+     -->
+    <div class="container">
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+    </div>
+    <div class="btn">
+        <button onclick="changecolor()" >Change color</button>
+    </div>
+    <script>
+        function getRandomColor(){
+            let color = "#";
+            const letters = "0123456789ABCDEF";
+            for(let i=0; i<6 ;i++){
+                color += letters[Math.floor(Math.random()*16)]
+            }
+            return color;
+        }
+        function changecolor(){
+            document.querySelectorAll(".box").forEach(e=>{
+                e.style.backgroundColor = getRandomColor();
+            })
+        }
+    </script>
+</body>
+
+</html>

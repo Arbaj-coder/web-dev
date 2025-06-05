@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Website Builder</title>
+    <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+      color: white;
+    }
+
+    .hero-heading {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bold;
+      padding: 40px 20px;
+      background: linear-gradient(140deg, #af0000 0%, #ff0000 96%);
+      animation: pulse 2s infinite;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+        @keyframes pulse {
+      0%, 100% {
+        transform: scale(1.02);
+        text-shadow: 0 0 10px rgba(0, 0, 0);
+      }
+      50% {
+        transform: scale(1.08);
+        text-shadow: 0 0 20px rgb(255, 255, 255);
+      }
+    }        
+        .input-box {
+            display: flex;
+            flex-direction: column;
+            width: 80vw;
+            margin: auto;
+            padding: 10vh;
+            border-bottom: 3px solid white;
+        }
+
+        .input-box button {
+            width: 12vw;
+            height: 6vh;
+            margin: 3vh auto;
+            background-color: red;
+            border-radius: 8px;
+            color: white;
+            font-weight: bolder;
+            transition: all 0.3s ease-in-out;
+        }
+        .input-box button:hover{
+            scale: 1.1;
+            background-color: rgb(208, 6, 6);
+        }
+
+        .output-box {
+            display: flex;
+            flex-direction: column;
+            width: 80vw;
+            margin: auto;
+        }
+    .box{
+      display: flex;
+      align-items: center;
+      gap: 20px; /* space between items */
+      padding: 10px;
+      width: 80vw;
+      margin: auto;
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .image-container img {
+      display: block;
+      width: 180px;
+      height: auto;
+    }
+
+    .text-overlay {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 4px 8px;
+      font-size: 12px;
+      border-radius: 3px;
+    }
+
+    .text-content h1 {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .text-content span {
+      font-size: 14px;
+      color: gray;
+    }
+
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 70%; /* controls wrapping */
+    }
+    a{
+      text-decoration: none;
+    }            
+    </style>
+</head>
+
+<body>
+      <h1 class="hero-heading">Dynamic Website Builder</h1>
+    <div class="input-box">
+        <label for="title">• Enter title</label>
+        <input type="text" id="title" placeholder="Enter title">
+        <label for="Channel">• Enter Channel</label>
+        <input type="text" id="channel" placeholder="Enter Channel">
+        <label for="views">• Enter views</label>
+        <input type="number" id="views" placeholder="Enter views">
+        <label for="months">• Enter months</label>
+        <input type="number" id="months" placeholder="Enter months">
+        <label for="duration">• Enter duration</label>
+        <input type="text" id="duration" placeholder="Enter duration (eg. 31:28)">
+        <label for="URL">• Enter image url</label>
+        <input type="text" id="URL" placeholder="Enter image URL">
+        <label for="URL1">• Enter url</label>
+        <input type="text" id="URL1" placeholder="Enter URL">
+        <button onclick="showResult()" >Get Result</button>
+    </div>
+    <div class="output-box">
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
