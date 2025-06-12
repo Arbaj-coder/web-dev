@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hacking Simulator</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      font-size: 1.5rem;
+      padding: 20px;
+    }
+
+    .output {
+      white-space: pre-line;
+    }
+
+    .blinking-dots::after {
+      content: '';
+      display: inline-block;
+      width: 1ch;
+      animation: blink 1s steps(1, end) infinite;
+    }
+
+    @keyframes blink {
+      0%   { content: '.'; }
+      33%  { content: '..'; }
+      66%  { content: '...'; }
+      100% { content: '.'; }
+    }
+  </style>
+</head>
+<body>
+  <div class="output" id="terminal"></div>
+
+  <script>
+    const messages = [
+      "Initializing Hacking",
+      "Reading your Files",
+      "Password files Detected",
+      "Sending all passwords and personal files to server",
+      "Cleaning up"
+    ];
+
+    const terminal = document.getElementById("terminal");
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    function getRandomDelay() {
+      return Math.floor(Math.random() * 7000) + 1000; // 1 to 7 seconds
+    }
+
+    async function showMessages() {
+      for (let msg of messages) {
+        const line = document.createElement("div");
+        line.innerHTML = `${msg}<span class="blinking-dots"></span>`;
+        terminal.appendChild(line);
+        await sleep(getRandomDelay());
+      }
+    }
+
+    showMessages();
+  </script>
+</body>
+</html>
